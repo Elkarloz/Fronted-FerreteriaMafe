@@ -8,13 +8,13 @@
                     <a href="#/provedor"><button type="button" class="btn btn-outline-success">Provedores</button></a>
                 </div>       
                 <div class="col-md-12 separacion">
-                    <button type="button" class="btn btn-outline-success">Productos</button>
+                    <a href="#/producto"><button type="button" class="btn btn-outline-success">Productos</button></a>
                 </div>       
                 <div class="col-md-12 separacion">
-                    <button type="button" class="btn btn-outline-success">Salida / Entrada</button>
+                    <a href="#/salida_entrada"><button type="button" class="btn btn-outline-success">Entrada/Salida</button></a>
                 </div>       
                 <div class="col-md-12 separacion">
-                    <button type="button" class="btn btn-outline-success">Movimientos</button>
+                    <a href="#/consultar_mov"><button type="button" class="btn btn-outline-success">Consultar movimientos</button></a>
                 </div>       
             </div>
         </div>
