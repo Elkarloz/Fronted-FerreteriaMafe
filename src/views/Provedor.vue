@@ -77,7 +77,7 @@
       </div>                       
       <div class="separacion row">
         <div class="col-md-6">
-          <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"   @click="EliminarProv(proveedoresID.ProvId)">Eliminar</button> 
+          <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"  @click="EliminarProv(proveedoresID.ProvId)">Eliminar</button> 
         </div>
         <div class="col-md-6">
         <a href="#/dashboard"><button class="btn btn-outline-info my-2 my-sm-0" type="submit"  >Atrás</button></a>
@@ -204,10 +204,11 @@
 export default {
   data(){
     return{
-      ruta: 'http://localhost:4000/api/proveedor/',
+      ruta: 'http://localhost:4000/api/proveedor',
       datos: {ProvNit: '', ProvTelefono: '', ProvEmail: '', ProvNEmpresa: '', ProvTipProducto: '', ProvCiudad: '', ProvDireccion: ''},
       proveedores: [],
       proveedoresID: {ProvNit: '', ProvTelefono: '', ProvEmail: '', ProvNEmpresa: '', ProvTipProducto: '', ProvCiudad: '', ProvDireccion: ''}, // actualizar y consulta por ID
+      Codigo: '',
       nombre: '',
       editar: false,
       mensaje: ''
@@ -218,7 +219,7 @@ export default {
   },
   methods:{
     agregarProv(){
-      fetch(this.ruta,{
+      fetch(this.ruta+ "/",{
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -239,7 +240,7 @@ export default {
         })
     },
     consultarProv(){
-      fetch(this.ruta,{
+      fetch(this.ruta + "/",{
         method: 'GET',
         mode: 'cors',
         headers: {
@@ -296,21 +297,18 @@ export default {
         })
     },
     EliminarProv(codigo){
-      fetch(this.ruta + `${codigo}`,{
-        method: 'DElETE',
+      fetch(this.ruta+ "/eliminar",{
+        method: 'POST',
         mode: 'cors',
         headers: {
           'Accept':'application/json',
-          'Content-type': 'application/json'
+          'Content-type':'application/json'
         },
+        body:JSON.stringify(codigo)
       })
       .then( res => res.json())
-      .then( data=> {
-          this.consultarProv();
-          this.limpiar();
-          this.editar = false
-          this.mensaje = data.message;
-          this.eliminado()
+      .then(data=> { 
+            this.consultarProv();
         })
         .catch(e =>{
             console.log(e);
