@@ -1,12 +1,17 @@
 <template>
   <div class="row col-md-12" id="card">
-    <div class="col-md-8" style="padding-top: 5%">     
-    <h1>PROVEEDORES</h1>
+    <div class="col-md-8" style="padding-top: 3%" >     
+    <h1>PROVEEDORES</h1> 
+    <br>
+    <img src="../resources/proveedor.png" height="80px"  width="90px">
+    
+    
       <form class="form-inline my-2 my-lg-0 text-center" @submit.prevent="consultarProvParam(nombre)"><!-- Btn input consultar -->
-        <input class="form-control mr-sm-2 ml-auto mr-auto" type="search" placeholder="Search" aria-label="Search" id="formulario" required v-model="nombre">
-        <button class="btn btn-outline-success my-2 my-sm-0 ml-auto mr-auto" type="submit" >Buscar</button>
+        <input class="form-control mr-sm-2 ml-auto mr-auto" type="search" size="70px" placeholder="Buscar" aria-label="Search" id="formulario" required v-model="nombre">
+       
+        <button class="btn btn-dark my-2 my-sm-0 ml-auto mr-auto" type="submit" >Buscar</button>
       </form>
-      <div style="padding-top: 5%;"></div><!-- Tabla -->
+      <div style="padding-top: 5%;" ></div><!-- Tabla -->
       <div class="ml-auto mr-auto" id="table-mod" style="overflow-y: scroll;">
         <table class="table table-hover">
           <thead class="thead-dark">
@@ -41,15 +46,15 @@
     <div class="col-md-4 my-auto" v-if="this.editar === true">
       <div class="input-group">
         <span class="my-auto" style="padding-right: 5px;">Nit: editar</span>
-        <input type="text" aria-label="First name" class="form-control" v-model="proveedoresID.ProvNit">
+        <input type="text"  aria-label="First name" class="form-control" v-model="proveedoresID.ProvNit">
       </div>                       
       <div class="input-group separacion">
-        <span class="my-auto" style="padding-right: 5px;">Teléfono:</span>
-        <input type="text" aria-label="First name" class="form-control" v-model="proveedoresID.ProvTelefono">
+        <span class="my-auto" style="padding-right: 5px;" >Teléfono:</span>
+        <input type="text" size="13px" aria-label="First name" class="form-control" v-model="proveedoresID.ProvTelefono">
       </div>                       
       <div class="input-group separacion">
         <span class="my-auto" style="padding-right: 5px;">Email:</span>
-        <input type="text" aria-label="First name" class="form-control" v-model="proveedoresID.ProvEmail">
+        <input type="text" size="13px" aria-label="First name" class="form-control" v-model="proveedoresID.ProvEmail">
       </div>                       
       <div class="input-group separacion">
         <span class="my-auto" style="padding-right: 5px;">N.Empresa: </span>
@@ -69,18 +74,18 @@
       </div>           
       <div class="separacion row"><!-- Btns -->
             <div class="col-md-6">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" disabled>Agregar</button>   
+              <button class="btn btn-dark my-2 my-sm-0" type="submit" disabled>Agregar</button>   
             </div>
             <div class="col-md-6">
-              <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" @click="ActualizarProv()">Actualizar</button> 
+              <button class="btn btn-dark my-2 my-sm-0" type="submit" @click="ActualizarProv()">Actualizar</button> 
             </div>
       </div>                       
       <div class="separacion row">
         <div class="col-md-6">
-          <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"   @click="EliminarProv(proveedoresID.ProvId)">Eliminar</button> 
+          <button class="btn btn-dark my-2 my-sm-0" type="submit"   @click="EliminarProv(proveedoresID.ProvId)">Eliminar</button> 
         </div>
         <div class="col-md-6">
-        <a href="#/dashboard"><button class="btn btn-outline-info my-2 my-sm-0" type="submit"  >Atrás</button></a>
+        <a href="#/dashboard"><button class=" btn btn-dark my-2 my-sm-0" type="submit"  >Atrás</button></a>
         </div> 
       </div>           
     </div>  
@@ -116,19 +121,19 @@
           </div>           
           <div class="separacion row"><!-- Btns -->
                 <div class="col-md-6">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  >Agregar</button>   
+                  <button class="btn btn-dark my-2 my-sm-0" type="submit"  >Agregar</button>   
                 </div>
                 <div class="col-md-6">
-                  <button class="btn btn-outline-warning my-2 my-sm-0" disabled type="submit" >Actualizar</button> 
+                  <button class="btn btn-dark my-2 my-sm-0" disabled type="submit" >Actualizar</button> 
                 </div>
           </div>                       
       </form>
       <div class="separacion row"><!-- Btns -->
         <div class="col-md-6">
-          <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" disabled>Eliminar</button>   
+          <button class="btn btn-dark my-2 my-sm-0" type="submit" disabled>Eliminar</button>   
         </div>
         <div class="col-md-6">
-          <a href="#/dashboard"><button class="btn btn-outline-info my-2 my-sm-0" type="submit"  >Atrás</button></a>
+          <a href="#/dashboard"><button class="btn btn-dark my-2 my-sm-0" type="submit"  >Atrás</button></a>
         </div>
       </div>
          
@@ -194,8 +199,13 @@
 <style>
 
 #table-mod{
-  height: 500px;
+  height: 290px;
+  
+  
+	
+   
 }
+
 
 
 </style>

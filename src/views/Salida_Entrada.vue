@@ -58,8 +58,8 @@
             <div class="col-md-12 row" style="padding-top:5%">
                 <div class="col-md-8"></div>
                 <div class="col-md-4 row">
-                    <button class="btn btn-outline-success ml-auto mr-auto" type="submit" >Agregar</button>
-                    <a href="#/dashboard" class="ml-auto mr-auto"><button class="btn btn-outline-success " type="button" >Atrás</button></a>
+                    <button class="btn btn-dark ml-auto mr-auto" type="submit" >Agregar</button>
+                    <a href="#/dashboard" class="ml-auto mr-auto"><button class="btn btn-dark " type="button" >Atrás</button></a>
                 </div>
             </div>
         </form>

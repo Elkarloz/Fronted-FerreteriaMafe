@@ -1,7 +1,7 @@
 <template>
     <div> 
         <div id="card">
-            <h1 style="padding-top: 5%">BUSCAR MOVIMIENTOS</h1>
+            <h1 style="padding-top: 2%">BUSCAR MOVIMIENTOS</h1>
                 <div class="col-md-4 mx-auto" style="padding-top: 3%">
                     <div class="input-group my-2">
                         <span class="my-auto" style="padding-right: 5px;">Ingresar fecha: </span>
@@ -9,8 +9,8 @@
                     </div>               
                 </div>
                 <div class="col-md-4 mx-auto row" style="padding-top: 3%" >
-                    <button class="btn btn-outline-success ml-auto mr-auto" type="button" @click="consultarfechaE()">Buscar Ingreso</button>              
-                    <button class="btn btn-outline-success ml-auto mr-auto" type="button" @click="consultarfechaS()">Buscar Salida</button>              
+                    <button class="btn btn-dark ml-auto mr-auto" type="button" @click="consultarfechaE()">Buscar Ingreso</button>              
+                    <button class="btn btn-dark ml-auto mr-auto" type="button" @click="consultarfechaS()">Buscar Salida</button>              
                 </div>
             <div class="col-md-8 mx-auto" id="box">
                 <div class="col-md-6 mx-auto">
@@ -26,8 +26,8 @@
                     </div>               
                 </div>
                 <div class="col-md-8 mx-auto row" style="padding-top: 3%" >
-                    <button class="btn btn-outline-success ml-auto mr-auto" type="button" @click="consultarrangoE()">Buscar Ingreso</button>              
-                    <button class="btn btn-outline-success ml-auto mr-auto" type="button" @click="consultarrangoS()">Buscar Salida</button>              
+                    <button class="btn btn-dark ml-auto mr-auto" type="button" @click="consultarrangoE()">Buscar Ingreso</button>              
+                    <button class="btn btn-dark ml-auto mr-auto" type="button" @click="consultarrangoS()">Buscar Salida</button>              
                 </div>
             </div>
         </div>
@@ -97,9 +97,12 @@
 </template>
 <style>
 #box{
-    border: 1px solid #0000003b;
+    border: 3px solid #0000003b;
     margin: 5%;
     padding: 5%;
+    width: 85%;
+    height: 45%;
+    
 }
 </style>
 
