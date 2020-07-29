@@ -51,6 +51,7 @@
     border-radius: 5px;
     padding: 4%;
    color:rgb(8, 8, 8);
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    
   
 	 

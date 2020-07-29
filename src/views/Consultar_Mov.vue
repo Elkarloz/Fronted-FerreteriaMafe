@@ -1,10 +1,10 @@
 <template>
     <div> 
         <div id="card">
-            <h1 style="padding-top: 2%">BUSCAR MOVIMIENTOS</h1>
+            <h1 style="padding-top: 2%" id="negro">BUSCAR MOVIMIENTOS</h1>
                 <div class="col-md-4 mx-auto" style="padding-top: 3%">
                     <div class="input-group my-2">
-                        <span class="my-auto" style="padding-right: 5px;">Ingresar fecha: </span>
+                        <span class="my-auto" style="padding-right: 5px;" id="negro">Ingresar fecha: </span>
                         <input type="date" aria-label="First name" class="form-control" required v-model="fecha">
                     </div>               
                 </div>
@@ -15,13 +15,13 @@
             <div class="col-md-8 mx-auto" id="box">
                 <div class="col-md-6 mx-auto">
                     <div class="input-group my-2">
-                        <span class="my-auto" style="padding-right: 5px;">Ingresar fecha inicio: </span>
+                        <span class="my-auto" style="padding-right: 5px;" id="negro">Ingresar fecha inicio: </span>
                         <input type="date" aria-label="First name" class="form-control" v-model="fecha1">
                     </div>               
                 </div>
                 <div class="col-md-6 mx-auto">
                     <div class="input-group my-2">
-                        <span class="my-auto" style="padding-right: 5px;">Ingresar fecha final : </span>
+                        <span class="my-auto" style="padding-right: 5px;" id="negro">Ingresar fecha final : </span>
                         <input type="date" aria-label="First name" class="form-control" v-model="fecha2">
                     </div>               
                 </div>
@@ -103,6 +103,10 @@
     width: 85%;
     height: 45%;
     
+}
+#negro{
+    color:rgb(8, 8, 8);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 </style>
 

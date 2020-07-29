@@ -1,15 +1,15 @@
 <template>
   <div class="row col-md-12" id="card">
+    
     <div class="col-md-8" style="padding-top: 3%" >     
-    <h1>PROVEEDORES</h1> 
+    <h1 id="dark">PROVEEDORES</h1> 
     <br>
-    <img src="../resources/proveedor.png" height="80px"  width="90px">
     
     
       <form class="form-inline my-2 my-lg-0 text-center" @submit.prevent="consultarProvParam(nombre)"><!-- Btn input consultar -->
         <input class="form-control mr-sm-2 ml-auto mr-auto" type="search" size="70px" placeholder="Buscar" aria-label="Search" id="formulario" required v-model="nombre">
        
-        <button class="btn btn-dark my-2 my-sm-0 ml-auto mr-auto" type="submit" >Buscar</button>
+        <button class="btn btn-dark my-2 my-sm-0 ml-auto mr-auto" type="submit">Buscar</button>
       </form>
       <div style="padding-top: 5%;" ></div><!-- Tabla -->
       <div class="ml-auto mr-auto" id="table-mod" style="overflow-y: scroll;">
@@ -45,15 +45,15 @@
     </div>
     <div class="col-md-4 my-auto" v-if="this.editar === true">
       <div class="input-group">
-        <span class="my-auto" style="padding-right: 5px;">Nit: editar</span>
+        <span class="my-auto" style="padding-right: 5px;" >Nit: editar</span>
         <input type="text"  aria-label="First name" class="form-control" v-model="proveedoresID.ProvNit">
       </div>                       
       <div class="input-group separacion">
-        <span class="my-auto" style="padding-right: 5px;" >Teléfono:</span>
+        <span class="my-auto" style="padding-right: 5px;"  >Teléfono:</span>
         <input type="text" size="13px" aria-label="First name" class="form-control" v-model="proveedoresID.ProvTelefono">
       </div>                       
       <div class="input-group separacion">
-        <span class="my-auto" style="padding-right: 5px;">Email:</span>
+        <span class="my-auto" style="padding-right: 5px;" >Email:</span>
         <input type="text" size="13px" aria-label="First name" class="form-control" v-model="proveedoresID.ProvEmail">
       </div>                       
       <div class="input-group separacion">
@@ -96,36 +96,36 @@
     <div class="col-md-4 my-auto" v-else> <!-- inputs default -->
       <form @submit.prevent="agregarProv()">
           <div class="input-group">
-            <span class="my-auto" style="padding-right: 5px;">Nit:</span>
+            <span class="my-auto" style="padding-right: 5px;" id="dark">Nit:</span>
             <input type="text" aria-label="First name" class="form-control" required v-model="datos.ProvNit">
           </div>                       
           <div class="input-group separacion">
-            <span class="my-auto" style="padding-right: 5px;">Teléfono:</span>
+            <span class="my-auto" style="padding-right: 5px;" id="dark">Teléfono:</span>
             <input type="text" aria-label="First name" class="form-control" required v-model="datos.ProvTelefono"  >
           </div>                       
           <div class="input-group separacion">
-            <span class="my-auto" style="padding-right: 5px;">Email:</span>
+            <span class="my-auto" style="padding-right: 5px;" id="dark">Email:</span>
             <input type="text" aria-label="First name" class="form-control" required v-model="datos.ProvEmail"  >
           </div>                       
           <div class="input-group separacion">
-            <span class="my-auto" style="padding-right: 5px;">N.Empresa: </span>
+            <span class="my-auto" style="padding-right: 5px;" id="dark">N.Empresa: </span>
             <input type="text" aria-label="First name" class="form-control" required v-model="datos.ProvNEmpresa"  >
           </div>                                         
           <div class="input-group separacion">
-            <span class="my-auto" style="padding-right: 5px;">Tipo Producto: </span>
+            <span class="my-auto" style="padding-right: 5px;" id="dark">Tipo Producto: </span>
             <input type="text" aria-label="First name" class="form-control" required v-model="datos.ProvTipProducto"  >
           </div>                       
           <div class="input-group separacion">
-            <span class="my-auto" style="padding-right: 5px;">Cuidad: </span>
+            <span class="my-auto" style="padding-right: 5px;" id="dark">Cuidad: </span>
             <input type="text" aria-label="First name" class="form-control" required v-model="datos.ProvCiudad"  >
           </div>                       
           <div class="input-group separacion">
-            <span class="my-auto" style="padding-right: 5px;">Dirección: </span>
+            <span class="my-auto" style="padding-right: 5px;" id="dark">Dirección: </span>
             <input type="text" aria-label="First name" class="form-control" required v-model="datos.ProvDireccion"  >
           </div>           
           <div class="separacion row"><!-- Btns -->
                 <div class="col-md-6">
-                  <button class="btn btn-dark my-2 my-sm-0" type="submit"  >Agregar</button>   
+                  <button class="btn btn-dark my-2 my-sm-0" type="submit">Agregar</button>   
                 </div>
                 <div class="col-md-6">
                   <button class="btn btn-dark my-2 my-sm-0" disabled type="submit" >Actualizar</button> 
@@ -204,10 +204,15 @@
 
 #table-mod{
   height: 290px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   
   
 	
    
+}
+#dark{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color:rgb(8, 8, 8);
 }
 
 

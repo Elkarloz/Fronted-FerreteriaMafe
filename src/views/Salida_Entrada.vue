@@ -1,13 +1,13 @@
 <template>
     <div id="card">
-        <h1 style="padding-top: 3%">ENTRADA/SALIDA</h1>
+        <h1 style="padding-top: 3%" id="dar">ENTRADA/SALIDA</h1>
         <form @submit.prevent="agregar()">
             <div class="col-md-12 row" >
                 <div class="col-md-4 mx-auto" >
-                    <label>Seleciona Entrada/Salida</label>
+                    <label id="dar">Seleciona Entrada/Salida</label>
                     <select class="form-control my-2" required v-model="datos.Estado">
-                        <option>Entrada</option>
-                        <option>Salida</option>
+                        <option id="dar">Entrada</option>
+                        <option id="dar">Salida</option>
                     </select>                  
                 </div>
                 <div class="col-md-4 mx-auto" >
@@ -16,13 +16,13 @@
             </div>
             <div class="col-md-12 row" style="padding-top: 1%;">
                 <div class="col-md-4 mx-auto">
-                    <label>Seleciona un producto</label>
+                    <label id="dar">Seleciona un producto</label>
                     <select class="form-control my-2 " required v-model="datos.NProducto">
                         <option v-for="(item, index) in productos" :key="index" >{{item.ProdNombre}}</option>
                     </select>                  
                 </div>
                 <div class="col-md-4 mx-auto">
-                    <label>Seleciona un proveedor</label>
+                    <label id="dar">Seleciona un proveedor</label>
                     <select class="form-control my-2 " required v-model="datos.NEmpresa">
                         <option v-for="(item, index) in proveedores" :key="index" >{{item.ProvNEmpresa}}</option>
                     </select>                  
@@ -31,13 +31,13 @@
             <div class="col-md-12 row" style="padding-top: 1%;">
                 <div class="col-md-4 mx-auto">
                     <div class="input-group my-2">
-                        <span class="my-auto" style="padding-right: 5px;">Descripcion: </span>
+                        <span class="my-auto" style="padding-right: 5px;" id="dar">Descripcion: </span>
                         <input type="text" aria-label="First name" class="form-control" required v-model="datos.Descripcion">
                     </div>               
                 </div>
                 <div class="col-md-4 mx-auto">
                     <div class="input-group my-2">
-                        <span class="my-auto" style="padding-right: 5px;">Cantidad: </span>
+                        <span class="my-auto" style="padding-right: 5px;" id="dar">Cantidad: </span>
                         <input type="text" aria-label="First name" class="form-control" required v-model="datos.Cantidad">
                     </div>               
                 </div>
@@ -45,7 +45,7 @@
             <div class="col-md-12 row" style="padding-top: 1%;">
                 <div class="col-md-4 mx-auto">
                     <div class="input-group my-2">
-                        <span class="my-auto" style="padding-right: 5px;">Valor total: </span>
+                        <span class="my-auto" style="padding-right: 5px;" id="dar">Valor total: </span>
                         <input type="text" aria-label="First name" class="form-control" required v-model="datos.Total">
                     </div>               
                 </div>
@@ -96,6 +96,13 @@
         </div>
     </div>
 </template>
+<style>
+#dar{
+    color:rgb(8, 8, 8);
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+</style>
 
 <script>
 export default {

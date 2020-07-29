@@ -1,29 +1,29 @@
 <template>
 
   <div id="card"> <!-- inputs -->
-    <h1 style="padding-top: 3%" >PRODUCTOS</h1>
+    <h1 style="padding-top: 3%"  id="naranja">PRODUCTOS</h1>
     <form @submit.prevent="agregarProd()">
         <div class="col-md-11 my-auto row">
-            <div class="input-group col-md-3" >
-                <span class="my-auto" style="padding-right: 5px;">N.Producto: </span>
+            <div class="input-group col-md-4" >
+                <span class="my-auto" style="padding-right: 5px;" id="naranja">N.Producto: </span>
                 <input type="text" aria-label="First name"  class="form-control" required v-model="producto.ProdNombre">
             </div> 
-            <div class="input-group col-md-3">
-                <span class="my-auto" style="padding-right:5px;">Marca: </span>
+            <div class="input-group col-md-4">
+                <span class="my-auto" style="padding-right:5px;" id="naranja">Marca: </span>
                 <input type="text" aria-label="First name" class="form-control" required v-model="producto.ProdMarca">
             </div> 
-            <div class="input-group col-md-3">
-                <span class="my-auto" style="padding-right: 5px;">Categoria: </span>
+            <div class="input-group col-md-4">
+                <span class="my-auto" style="padding-right: 5px;" id="naranja">Categoria: </span>
                 <input type="text" aria-label="First name" class="form-control" required v-model="producto.ProdCategoria">
             </div> 
         </div>
         <div class="col-md-12 my-auto separacion row">
-            <div class="input-group col-md-2" style="padding-top: 1%" >
-                <span class="my-auto" style="padding-right: 5px;" >Precio: </span>
+            <div class="input-group col-md-6" style="padding-top: 1%" >
+                <span class="my-auto" style="padding-right: 5px;"  id="naranja">Precio: </span>
                 <input type="text" aria-label="First name"    class="form-control" required v-model="producto.ProdPrecio">
             </div> 
-            <div class="input-group col-md-2" style="padding-top: 1%">
-                <span class="my-auto" style="padding-right: 5px;">Iva:</span>
+            <div class="input-group  col-md-6" style="padding-top: 1%">
+                <span class="my-auto" style="padding-right: 5px;" id="naranja">Iva:</span>
                 <input type="text" aria-label="First name" class="form-control" required v-model="producto.ProdIva">
             </div> 
             <div class="input-group col-md-4" style="padding-top: 1%">
@@ -31,10 +31,10 @@
             </div> 
         </div>
         <div class="col-md-12 row" style="padding-top: 1%"><!-- btn -->
-            <div class="col-md-8">
-                <input class="form-control mr-sm-2 ml-auto mr-auto" type="search" size="70px" placeholder="Buscar"  aria-label="Search" id="formulario" v-model="nombre">
+            <div class="col-md-7">
+                <input class="form-control mr-sm-2 ml-auto mr-auto" type="search"  placeholder="Buscar"  aria-label="Search" id="formulario" v-model="nombre">
             </div>
-            <div class="col-md-4"> 
+            <div class="col-md-5"> 
                 <div class="col-md-12 row">
                     <button class="btn btn-dark ml-auto mr-auto" type="button" @click="consultarProdParam(nombre)">Buscar</button>
                     <button class="btn btn-dark ml-auto mr-auto" type="submit" >Agregar</button>
@@ -72,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12 row" style="padding: 5% 0">
+    <div class="col-md-12 row" style="padding: 5% 0" >
         <div class="col-md-10">
         </div>
         <div class="col-md-2">
@@ -82,6 +82,15 @@
   </div>
   
 </template>
+<style>
+#naranja{
+  color:rgb(8, 8, 8);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+
+</style>
+
 
 
 
