@@ -227,10 +227,10 @@ export default {
       datos: {ProvNit: '', ProvTelefono: '', ProvEmail: '', ProvNEmpresa: '', ProvTipProducto: '', ProvCiudad: '', ProvDireccion: ''},
       proveedores: [],
       proveedoresID: {ProvNit: '', ProvTelefono: '', ProvEmail: '', ProvNEmpresa: '', ProvTipProducto: '', ProvCiudad: '', ProvDireccion: ''}, // actualizar y consulta por ID
-      Codigo: '',
       nombre: '',
       editar: false,
-      mensaje: ''
+      mensaje: '',
+      Codigo: {id: ''}
     };
   },
   created(){
@@ -315,15 +315,16 @@ export default {
             console.log(e);
         })
     },
-    EliminarProv(codigo){
+    EliminarProv(Cod){
+      this.Codigo.id = Cod
       fetch(this.ruta+ "/eliminar",{
         method: 'POST',
         mode: 'cors',
         headers: {
           'Accept':'application/json',
-          'Content-type':'application/json'
+          'Content-type': 'application/json'
         },
-        body:JSON.stringify(codigo)
+        body:JSON.stringify(this.Codigo)
       })
       .then( res => res.json())
       .then(data=> { 
