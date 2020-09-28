@@ -6,10 +6,10 @@
     <br>
     
     
-      <form class="form-inline my-2 my-lg-0 text-center" @submit.prevent="consultarProvParam(nombre)"><!-- Btn input consultar -->
-        <input class="form-control mr-sm-2 ml-auto mr-auto" type="search" size="70px" placeholder="Buscar" aria-label="Search" id="formulario" required v-model="nombre">
+      <form class="form-inline my-2 my-lg-0 text-center"  @submit.prevent="consultarProvParam(nombre)"> <!-- Btn input consultar -->
+        <input class="form-control mr-sm-2 ml-auto mr-auto" type="search" size="70px" placeholder="Buscar" aria-label="Search" id="formulario"   required v-model="nombre">
        
-        <button class="btn btn-dark my-2 my-sm-0 ml-auto mr-auto" type="submit">Buscar</button>
+        <button class="btn btn-dark my-2 my-sm-0 ml-auto mr-auto" type="submit" >Buscar</button>
       </form>
       <div style="padding-top: 5%;" ></div><!-- Tabla -->
       <div class="ml-auto mr-auto" id="table-mod" style="overflow-y: scroll;">
