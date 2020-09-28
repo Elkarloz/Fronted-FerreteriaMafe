@@ -340,7 +340,7 @@ export default {
     },
     consultarProvParam(nombre){
       console.log(nombre);
-      fetch(this.ruta + "param"+ `/${nombre}`,{
+      fetch(this.ruta + "/params"+ `/${nombre}`,{
         method: 'GET',
         mode: 'cors',
         headers: {
